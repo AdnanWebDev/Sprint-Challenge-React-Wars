@@ -1,7 +1,8 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import DataPull from './components/data'
 import CharacterCard from './components/CharacterCard'
+
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -16,8 +17,16 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <DataPull data={setPeopleList}/>
-      {peopleList.map((item, index) => {return <CharacterCard key={index} CharacterName={item.name} />})}
+      <DataPull data={setPeopleList} />
+      {peopleList.map((item, index) => {
+        return <CharacterCard
+          key={index} 
+          CharacterName={item.name}
+          CharacterHeight={item.height}
+          CharacterEyeColor={item.eye_color}
+          CharacterGender={item.gender}
+          />
+      })}
     </div>
   );
 }

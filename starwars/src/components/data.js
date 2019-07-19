@@ -11,7 +11,7 @@ export default function DataPull(props){
 
 
     return(
-        <div>Data being pulled</div>
+        <div></div>
     )
 }
 
