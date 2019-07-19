@@ -11,10 +11,15 @@ export default function CharacterCard(props) {
     border: 2px black solid;
     `;
 
+    const CharHead = styled.div`
+    font-size:2rem;
+    font-style:italic;
+    `;
+
     return (
         // Card is styled component and taps into props passed and renders them on the screen
         <Card className="character-card">
-            <p>{props.CharacterName}</p>
+            <CharHead>{props.CharacterName}</CharHead>
             <p>Height: {props.CharacterHeight}</p>
             <p>Eye Color: {props.CharacterEyeColor}</p>
             <p>Gender: {props.CharacterGender}</p>
